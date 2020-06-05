@@ -636,7 +636,7 @@ textarea.contact-form-text {
 
 .media {
     position: absolute;
-    top: 6%;
+    top: 5%;
     left: 50%;
     transform: translateY(-50%);
     width: 50%;
