@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/bd6a92d9f7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="sample.css">
     <link rel="stylesheet" href="btn.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
@@ -28,7 +29,10 @@
                         <div class="about-section-col">
                             <div class="about">
                                 <p>
-                                    Hi! I am Abullaise Ibrahim, a web designer/developer focused on crafting great web experiences. Designing and Coding have been my passion since the days I started working with computers but I found myself into web design/development since 2020. I enjoy
+                                    Hi! I am Abullaise Ibrahim, a web designer/developer focused on crafting great web
+                                    experiences. Designing and Coding have been my passion since the days I started
+                                    working with computers but I found myself into web design/development since 2020. I
+                                    enjoy
                                     creating beautifully designed, intuitive and functional websites..
                                 </p>
                                 <a href="" class="a-tag">Read More</a>
@@ -102,7 +106,7 @@
 
                     </h1>
                     <p>HTML / CSS / JavaScript </p>
-                    <button class="btn-home">Contact ME</button>
+                    <button id="contact_me" class="btn-home">Contact ME</button>
                 </div>
             </div>
         </div>
@@ -120,7 +124,8 @@
                             </div>
                             <div class="service-title">Web Designs</div>
                             <div class="service-desc">
-                                The main responsibility of a web designer is to design and build websites to the client’s specifications.
+                                The main responsibility of a web designer is to design and build websites to the
+                                client’s specifications.
                             </div>
                         </div>
 
@@ -130,7 +135,8 @@
                             </div>
                             <div class="service-title">Web Development</div>
                             <div class="service-desc">
-                                Web designers are extensively knowledgeable in programming languages used for web development
+                                Web designers are extensively knowledgeable in programming languages used for web
+                                development
                             </div>
                         </div>
 
@@ -150,7 +156,8 @@
                             </div>
                             <div class="service-title">Data Entry</div>
                             <div class="service-desc">
-                                Create and manage spreadsheets with large numbers of figures and Verify data by comparing it to source documents
+                                Create and manage spreadsheets with large numbers of figures and Verify data by
+                                comparing it to source documents
                             </div>
                         </div>
 
@@ -171,28 +178,18 @@
             <div class="card-menu-menu-btn"></div>
             <h2 class=" card-menu-section-heading">Contact</h2>
             <div class="media">
-
-
-                <a class="btn-media" href="https://www.facebook.com/abullaiz.ibrahim/">
+                <a class="btn-media" href="#">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-
-
-                <a class="btn-media" href="https://twitter.com/AbullaizIbrahim">
+                <a class="btn-media" href="#">
                     <i class="fab fa-twitter"></i>
                 </a>
-
-
-                <a class="btn-media" href="https://www.linkedin.com/in/abullaise-ibrahim-28ab551a6/">
+                <a class="btn-media" href="#">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-
-
-                <a class="btn-media" href="https://www.instagram.com/abou_eel_leith/">
+                <a class="btn-media" href="#">
                     <i class="fab fa-instagram"></i>
                 </a>
-
-
             </div>
             <div class=" contact-section">
                 <h1>Contact Us</h1>
@@ -220,20 +217,20 @@
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var $demo = $(".card-menu");
             var numOfSections = $(".card-menu-section").length;
 
-            $(document).on("click", ".card-menu-menu-btn", function() {
+            $(document).on("click", ".card-menu-menu-btn", function () {
                 $demo.addClass("menu-active");
             });
 
-            $(document).on("click", ".card-menu-close-menu", function() {
+            $(document).on("click", ".card-menu-close-menu", function () {
                 $demo.removeClass("menu-active");
             });
 
-            $(document).on("click", ".card-menu.menu-active .card-menu-section", function() {
+            $(document).on("click", ".card-menu.menu-active .card-menu-section", function () {
                 var $section = $(this);
                 var index = +$section.data("section");
 
@@ -247,9 +244,15 @@
                 }
             });
 
-
-
-
+            $(document).on("click", "#contact_me", function () {
+                for (var i = 1; i <= numOfSections; i++) {
+                    if (i === 4) {
+                        $(".card-menu-section[data-section=" + i + "]").removeClass("inactive");
+                    } else {
+                        $(".card-menu-section[data-section=" + i + "]").addClass("inactive");
+                    }
+                }
+            })
 
         });
     </script>
