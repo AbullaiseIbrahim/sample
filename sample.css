@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700&display=swap");
+
 body {
     margin: 0;
     padding: 0;
@@ -253,6 +254,7 @@ li {
     color: #fff;
     font-size: 3vw;
     cursor: context-menu;
+    letter-spacing: -5px;
 }
 
 .text span {
@@ -273,7 +275,7 @@ span.m-left {
 }
 
 .text p {
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     word-spacing: 10px;
 }
 
@@ -291,13 +293,14 @@ span.m-left {
     background: none;
     border: 3px solid #ed5565;
     color: #ed5565;
-    font-size: .8vw;
+    font-size: 14px;
     letter-spacing: 2px;
     position: relative;
     top: 80px;
     overflow: hidden;
-    transition: 5s;
+    transition: 2s;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-home:hover {
@@ -382,10 +385,10 @@ span.m-left {
     background-color: none;
     border: 3px solid #ed5565;
     color: #ed5565;
-    font-size: 0.8vw;
+    font-size: 14px;
     letter-spacing: 2px;
     overflow: hidden;
-    transition: 5s;
+    transition: .3s;
     display: inline-block;
 }
 
@@ -403,10 +406,6 @@ span.m-left {
     height: 0%;
     z-index: -1;
     transition: 0.5s;
-}
-
-.a-tag:hover::before {
-    height: 100%;
 }
 
 .a-tag:hover::before {
@@ -459,10 +458,12 @@ span.m-left {
         flex: 100%;
         margin: 10px 0;
     }
+
     .about,
     .skills {
         padding: 0;
     }
+
     .about {
         text-align: center;
     }
@@ -572,7 +573,7 @@ span.m-left {
     width: 100px;
     height: 10px;
     background: #ed5565;
-    margin: 40px auto;
+    margin: 10px auto 40px;
 }
 
 .contact-form {
@@ -636,10 +637,10 @@ textarea.contact-form-text {
 
 .media {
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 3%;
+    right: 5%;
     transform: translateY(-50%);
-    width: 50%;
+    width: auto;
     text-align: center;
 }
 
@@ -648,7 +649,7 @@ textarea.contact-form-text {
     width: 40px;
     height: 40px;
     background: none;
-    margin: -2px;
+    margin-right: 6px;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px #00000070;
     color: #fff;
@@ -689,10 +690,12 @@ textarea.contact-form-text {
         left: -110%;
         top: 90%;
     }
+
     50% {
         left: 10%;
         top: -30%;
     }
+
     100% {
         top: -10%;
         left: -10%;
